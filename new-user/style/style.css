@@ -16,6 +16,7 @@ body{
     overflow-x: hidden;
     scroll-behavior: smooth;
     font-family: 'Work sans';
+    max-height: 100vh !important;
 }
 header{
     width: 100%;
