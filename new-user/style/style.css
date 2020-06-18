@@ -18,6 +18,15 @@ body{
     font-family: 'Work sans';
     max-height: 100vh !important;
 }
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background: #d7385e;
+}
+::-webkit-scrollbar-track{
+    background: black;
+}
 header{
     width: 100%;
     height: 60px;
@@ -107,12 +116,7 @@ header #back svg{
     z-index: 1;
   }
  
-  .inner-header {
-    height:65vh;
-    width:100%;
-    margin: 0;
-    padding: 0;
-  }
+
   .waves {
     position:relative;
     width: 100%;
@@ -175,6 +179,15 @@ use:nth-child(1){
     color: white;
     letter-spacing: 1px;
     padding: 10px;
+}
+footer{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: #d7385e;
 }
 @media only screen and (max-width:500px){
     .form{
