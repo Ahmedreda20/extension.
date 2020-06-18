@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    background: #f5f5f5;
+    overflow-x: hidden;
+}
+header{
+    width: 100%;
+    height: 60px;
+    background: #0101017a;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+}
+header a img{
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    margin: 10px 0;
+    margin-left: 25px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+header #logo{
+    text-decoration: none;
+    color: white;
+    font-family: 'MuseoModerno', cursive;
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.slider{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: url('https://images.pexels.com/photos/1366957/pexels-photo-1366957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-size: 100% 100%;
+    background-position: center;
+}
+.box{
+    width: 100%;
+    height: 100%;
+    background: #1b1b2fb0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slider h1{
+    font-family: 'MuseoModerno', cursive;
+    font-size:60px;
+    letter-spacing: 2px;
+    text-align: center;
+    line-height: 100px;
+    color: white;
+}
+.slider p{
+    font-family: 'El Messiri', sans-serif;
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-align: center;
+    padding: 10px;
+    color: white;
+}
+.btn-download{
+    padding: 10px;
+    border: none;
+    background: black;
+    border: 2px solid black;
+    text-align: center;
+    width: 85%;
+    height: 50px;
+    display: block;
+    margin: 20px auto;
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 20px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    outline: none;
+    transition: .5s ease-in-out;
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -ms-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    box-shadow: 1px 10px 50px -10px #000;
+}
+.mobile-nav{
+    width: 50px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin:0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#menu_mobile{
+    display: none;
+}
+.btn-mobile-nav{
+    width: 100%;
+    height: 50%;
+    position: relative;
+    outline: none;
+    cursor: pointer;
+    z-index: 2;
+}
+.btn-mobile-nav span{
+    width: 60%;
+    height: 3px;
+    background: #ff6464;
+    display: block;
+    margin: 5px auto;
+    transition: .5s ease-in-out;
+}
+#menu_mobile:checked ~ label span:nth-child(1){
+    transform: rotate(45deg);
+    margin-top: 13px;
+}
+#menu_mobile:checked ~ label span:nth-child(2){
+    transform: rotate(-45deg);
+    margin-top: -8px;
+}
+#menu_mobile:checked ~ label span:nth-child(3){
+    width: 0;
+}
+#menu_mobile:checked ~ label + .mobile-bar{
+    right: 0 !important;
+}
+#menu_mobile:checked ~ label span{
+    animation: aima 5s;
+}
+@keyframes aima{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@-webkit-keyframes aima{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@-moz-keyframes aima{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@-ms-keyframes aima{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@-o-keyframes aima{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.slide a{
+    text-decoration: none;
+}
+.slide{
+    width: 700px;
+    position: relative;
+    transition: .5s ease-in-out;
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -ms-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+}
+.mobile-bar{
+    width: 300px;
+    background: #000;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    transition: 1s ease-in-out;
+}
+.bar{
+    position: relative;
+    height: 60px;
+    width: 100%;
+    margin-bottom: 2%;
+}
+.bar #logo img{
+    margin-left: 10px !important;
+}
+.bar #logo{
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+.mobile-bar nav{
+    margin-left: 10px;
+    padding: 10px;
+}
+.mobile-bar nav ul li{
+    display: block;
+    padding: 5px 10px;
+}
+.mobile-bar nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 17px;
+    transition: .5s ease-in-out;
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -ms-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+}
+.mobile-bar nav ul li a:hover{
+    color: rgb(49, 49, 49);
+}
+.mobile-bar svg{
+    margin-right: 5px;
+    width: 20px;
+    vertical-align: middle;
+}
+@media only screen and (max-width:668px){
+    .slide{
+        width: 100%;
+    }
+    .slide h1{
+        font-size: 40px;
+        padding: 0 10px !important;
+        line-height: normal;
+    }
+    .slide p{
+        font-size: 17px;
+        line-height: 25px;
+    }
+}
