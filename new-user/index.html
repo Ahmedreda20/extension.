@@ -33,6 +33,7 @@
         <div class="group-form log-in">
             <a href="">Already I have an account!</a>
         </div>
+
         <div class="group-form">
             <button class="btn-signup">SIGN UP</button>
         </div>
@@ -43,8 +44,70 @@
     <p>
         copyright &copy; all rights reserved
     </p>
-
 </div>
 </footer>
+
+<!-- Error popup -->
+<div class="error-container">
+    <div class="popup">
+        <img src="https://i.postimg.cc/NGTr8pyG/404-Error-Page-not-Found-with-people-connecting-a-plug-amico.png" alt="Error" >
+        <strong>Error!</strong>
+        <p>There is an error please try again.</p>
+        <div class="footer-controls">
+            <button class="btn-tryagain">Retry</button>
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-auth.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-analytics.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/7.15.1/firebase-firestore.js"></script>
+
+
+<script type="text/javascript">
+  var firebaseConfig = {
+    apiKey: "AIzaSyCVJy14NLkR55CQx94oZLOzny8W4T25hYk",
+    authDomain: "wallet-extension.firebaseapp.com",
+    databaseURL: "https://wallet-extension.firebaseio.com",
+    projectId: "wallet-extension",
+    storageBucket: "wallet-extension.appspot.com",
+    messagingSenderId: "45020600167",
+    appId: "1:45020600167:web:06e6ab8091bf06f1f741c2",
+    measurementId: "G-2QPEZ5CBGZ"
+  };
+  firebase.initializeApp(firebaseConfig);
+
+    const signup_form = document.querySelector('#form-signup');
+    const error_container =  document.querySelector('.error-container');
+    signup_form.addEventListener('submit' , (e) =>{
+        e.preventDefault();
+        const name = signup_form['Full-Name'].value;
+        const email = signup_form['email'].value;
+        const email_confirm = signup_form['email-confirm'].value;
+        const password = signup_form['password'].value;
+        if(email_confirm != email){
+            error_container.style.display = "flex";
+            // location.reload();
+        }else{
+                firebase.auth().createUserWithEmailAndPassword(email, password).catch(cred =>{
+                    console.log(cred);
+                    signup_form.reset();
+                });
+        }
+    });
+
+    document.querySelector('.btn-tryagain').addEventListener('click' , function(){
+        error_container.style.display = "none";
+        location.reload();
+    });
+    window.onclick = function(event) {
+  if (event.target == error_container) {
+    error_container.style.display = "none";
+  }
+}
+</script>
 </body>
 </html>
