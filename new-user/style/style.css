@@ -217,7 +217,62 @@ footer{
 @media only screen and (max-width:500px){
     .form{
         width: 90%;
-        margin-top: 150px !important;
+        margin-top: 100px !important;
+        animation: mobile-animate 1s;
+        -webkit-animation: mobile-animate 1s;
+        -moz-animation: mobile-animate 1s;
+        -ms-animation: mobile-animate 1s;
+        -o-animation: mobile-animate 1s;
+    }
+    @keyframes mobile-animate {
+        from{
+            margin-top: 0 !important;
+            opacity: 0;
+        }
+        to{
+            margin-top: 100px !important;
+            opacity: 1;
+        }
+    }
+    @-webkit-keyframes mobile-animate {
+        from{
+            margin-top: 0 !important;
+            opacity: 0;
+        }
+        to{
+            margin-top: 100px !important;
+            opacity: 1;
+        }
+    }
+    @-moz-keyframes mobile-animate {
+        from{
+            margin-top: 0 !important;
+            opacity: 0;
+        }
+        to{
+            margin-top: 100px !important;
+            opacity: 1;
+        }
+    }
+    @-ms-keyframes mobile-animate {
+        from{
+            margin-top: 0 !important;
+            opacity: 0;
+        }
+        to{
+            margin-top: 100px !important;
+            opacity: 1;
+        }
+    }
+    @-o-keyframes mobile-animate {
+        from{
+            margin-top: 0 !important;
+            opacity: 0;
+        }
+        to{
+            margin-top: 100px !important;
+            opacity: 1;
+        }
     }
     .form p{
         padding: 5px 20px !important;
