@@ -220,7 +220,7 @@ footer{
     }
     .form{
         width: 90%;
-        margin-top: 100px !important;
+        margin-top: 125px !important;
         animation: mobile-animate 1s;
         -webkit-animation: mobile-animate 1s;
         -moz-animation: mobile-animate 1s;
@@ -233,7 +233,7 @@ footer{
             opacity: 0;
         }
         to{
-            margin-top: 100px !important;
+            margin-top: 125px !important;
             opacity: 1;
         }
     }
@@ -243,7 +243,7 @@ footer{
             opacity: 0;
         }
         to{
-            margin-top: 100px !important;
+            margin-top: 125px !important;
             opacity: 1;
         }
     }
@@ -253,7 +253,7 @@ footer{
             opacity: 0;
         }
         to{
-            margin-top: 100px !important;
+            margin-top: 125px !important;
             opacity: 1;
         }
     }
@@ -263,7 +263,7 @@ footer{
             opacity: 0;
         }
         to{
-            margin-top: 100px !important;
+            margin-top: 125px !important;
             opacity: 1;
         }
     }
@@ -273,7 +273,7 @@ footer{
             opacity: 0;
         }
         to{
-            margin-top: 100px !important;
+            margin-top: 125px !important;
             opacity: 1;
         }
     }
