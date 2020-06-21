@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
     <link rel="icon" href="https://i.postimg.cc/FRnFpKWM/wallet.png">
-    <title>Wallet | Sign up</title>
+    <title>Wallet | Sign in</title>
 </head>
 <body>
     <header>
@@ -17,27 +17,26 @@
         <div class="form">
             <h1>Welcome</h1>
             <p>Register now and get a free, secure note that keeps everything you want </p>
-            <form id="form-signup">
-        <div class="group-form">
-            <input type="text" name="fullName" id="Full-Name" placeholder="Full name" required autocomplete="off">
-        </div>
+            <form id="form-signin">
+
         <div class="group-form">
             <input type="email" name="email" id="email" placeholder="Email" required autocomplete="off">
-        </div>
-        <div class="group-form">
-            <input type="email" name="email-confirm" id="email-confirm" placeholder="Confirm email" required autocomplete="off">
         </div>
         <div class="group-form">
             <input type="password" name="password" id="password" placeholder="Password" required autocomplete="off">
         </div>
         <div class="group-form log-in">
-            <a href="../log-in/">Already I have an account!</a>
+            <a href="../new-user/"> have not an account!</a>
         </div>
 
         <div class="group-form">
-            <button class="btn-signup">SIGN UP</button>
+            <button class="btn-signin">SIGN IN</button>
         </div>
-    </form>
+
+    </form> 
+    <div class="group-form">
+            <button class="btn-signin-with-google" onclick="googleSignin()">SIGN IN WITH GOOGLE</button>
+        </div>
     </div>
 </div>
 <footer>
@@ -85,55 +84,28 @@
 var db = firebase.firestore();
 
 
+function googleSignin(){
+    
+var provider = new firebase.auth.GoogleAuthProvider();
+provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
+firebase.auth().languageCode = 'pt';
 
-
-    const signup_form = document.querySelector('#form-signup');
-    const error_container =  document.querySelector('.error-container');
-
-    signup_form.addEventListener('submit' , (e) =>{
-        e.preventDefault();
-
-        const name = signup_form['Full-Name'].value;
-        const email = signup_form['email'].value;
-        const email_confirm = signup_form['email-confirm'].value;
-        const password = signup_form['password'].value;
-
-
-
-
-
-
-        if(email_confirm != email){
-            error_container.style.display = "flex";
-            // location.reload();
-
-        }
-        else{
-
-                firebase.auth().createUserWithEmailAndPassword(email, password).then(cred =>{ 
-        return db.collection("users").doc(cred.user.uid).set({
-                name: name,
-                email: email,
-                password: password,
-                message: "This user have created his/her account right now"
-            });
-                signup_form.reset();
-                });
-            }
-    });
-
-
-    document.querySelector('.btn-tryagain').addEventListener('click' , function(){
-        // error_container.style.display = "none";
-        // location.reload();
-    });
-
-    window.onclick = function(event) {
-
-  if (event.target == error_container) {
-    error_container.style.display = "none";
-  }
-
+firebase.auth().signInWithPopup(provider).then(function(result) {
+  // This gives you a Google Access Token. You can use it to access the Google API.
+  var token = result.credential.accessToken;
+  // The signed-in user info.
+  var user = result.user;
+  // ...
+}).catch(function(error) {
+  // Handle Errors here.
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  // The email of the user's account used.
+  var email = error.email;
+  // The firebase.auth.AuthCredential type that was used.
+  var credential = error.credential;
+  // ...
+});
 }
 </script>
 </body>

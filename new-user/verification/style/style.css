@@ -216,7 +216,7 @@ footer{
 }
 @media only screen and (max-width:500px){
     .container{
-        height: 100vh !important;
+        height: 100% !important;
     }
     .form{
         width: 90%;

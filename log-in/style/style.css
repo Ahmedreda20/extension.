@@ -214,6 +214,9 @@ footer{
     -ms-transition: 1s ease-in-out;
     -o-transition: 1s ease-in-out;
 }
+.btn-signin-with-google{
+    background: #1b6ca8 !important;
+}
 @media only screen and (max-width:500px){
     .container{
         height: 100vh !important;
