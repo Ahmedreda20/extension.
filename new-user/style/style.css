@@ -1,8 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=El+Messiri&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@500&display=swap');
 
@@ -216,7 +212,7 @@ footer{
 }
 @media only screen and (max-width:500px){
     .container{
-        height: 100vh !important;
+        height: 100% !important;
     }
     .form{
         width: 90%;
