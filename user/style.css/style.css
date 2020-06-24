@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    background: #f5f5f5;
+    font-family: "Quicksand" , "Tajawal";
+}
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-thumb{
+    background: black;
+}
+::-webkit-scrollbar-track{
+    background: transparent;
+}
+header{
+    width: 100%;
+    height: 60px;
+    background: #010101;
+    z-index: 1;
+    margin-bottom: 20px;
+    position: relative;
+}
+header a img{
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    margin: 10px 0;
+    margin-left: 25px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+.bar{
+    height: 100%;
+    width: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bar input{
+    display: none;
+}
+.bar label{
+    z-index: 1;
+    position: relative;
+    cursor: pointer;
+}
+.bar label span{
+    background: red;
+    display: block;
+    margin: 5px auto;
+    width: 30px;
+    height:3px;
+    z-index: 10;
+    position: relative;
+    transition: .5s ease-in-out;
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -ms-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+}
+.bar input:checked ~ label span:nth-child(1){
+    transform: rotate(45deg);
+    margin-top: 6px;
+}
+.bar input:checked ~ label span:nth-child(2){
+    width: 0;
+}
+.bar input:checked ~ label span:nth-child(3){
+    transform: rotate(-45deg);
+    margin-top: -15px;
+}
+.bar input:checked ~ .user-info{
+    right: 0;
+}
+.user-info{
+    width: 250px;
+    background: black;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: -150%;
+    transition: .5s ease-in-out;
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -ms-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+}
+.header-user{
+    width: 100%;
+    height: 60px;
+    position: relative;
+}
+.user-info nav{
+    padding: 10px;
+    color: white !important;
+}
+.user-info ul li{
+    display: block;
+    margin: 10px auto;
+}
+.user-info nav ul li a{
+    color: white;
+}
+.btn-edit{
+    width: 80%;
+    padding: 10px;
+    border-bottom: 1px solid #c3c3c3 !important;
+    border: none;
+    background: none;
+    color: white;
+    font-family: "Quicksand" , "Tajawal";
+    display: block;
+    font-size: 15px;
+    margin: 5px auto;
+    outline: none;
+    transition: .5s ease-in-out;
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -ms-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    cursor: pointer;
+}
+.container{
+    width: 97%;
+    height: 89vh;
+    background: white;
+    box-shadow: 1px 10px 10px #f3f3f3;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
+.userimg{
+    width: 95%;
+    height: 250px;
+    border-bottom: 1px solid #f3f3f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+}
+.user-box{
+    width: 300px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    text-align: center;
+    position: relative;
+}
+.img{
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    box-shadow: 1px 10px 25px -10px #c3c3c3;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img::after{
+    width: 15px;
+    height: 15px;
+    border-radius: 100px;
+    position: absolute;
+    background: rgb(42, 230, 9);
+    z-index: 1;
+    content: '';
+    top: 0;
+    right: 0;
+    margin:15px;
+    box-shadow: 0 0 0 3px  white;
+}
+.img img{
+    width: 95%;
+    height: 95%;
+    border-radius: 100px;
+
+}
+.box p{
+    font-size: 20px;
+    padding: 10px;
+}
+.group{
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin-top: 30px !important;
+    margin: 0 auto;
+    display: none;
+}
+.user-info-data{
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin-top: 30px !important;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center !important;
+}
+.user-box-data{
+    width: 80%;
+}
+.user-info-data .group-form{
+    height: auto;
+    padding: 10px;
+    margin: 0 !important;
+    width: 50%;
+}
+
+.group-form{
+    width: 45%;
+    display: inline-block;
+    height: 70px;
+    position: relative;
+    margin: 10px;
+}
+.group-form input{
+    font-family: "Quicksand" , "Tajawal"; 
+    width: 95%;
+    display: block;
+    margin: 5px auto;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    padding: 10px;
+    border: 2px solid black;
+    transition: .5s ease-in-out;
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -ms-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+
+}
+.group-form label{
+    padding: 5px;
+    font-size: 17px;
+}
+.group-form label span{
+    color: red;
+}
+.btn-save{
+    padding: 10px 20px;
+    border: none; 
+    background: black;
+    color: white;
+    font-size: 16px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 10px;
+    font-family: "Quicksand" , "Tajawal"; 
+    cursor: pointer;
+    outline: none;
+    transition: .5s ease-in-out;
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -ms-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    border-radius: 5px !important;
+    box-shadow: 2px 10px 10px -10px black;
+    display: none;
+}
+.btn{
+    padding: 10px 20px;
+    border: none; 
+    background: black;
+    color: white;
+    font-size: 16px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 10px;
+    font-family: "Quicksand" , "Tajawal"; 
+    cursor: pointer;
+    outline: none;
+    transition: .5s ease-in-out;
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -ms-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    border-radius: 5px !important;
+    box-shadow: 2px 10px 10px -10px black;
+}
+ .btn-save::after{
+    content: "Please don't click here if there isn't any data you want to change til not deleting all data you have";
+    padding: 10px;
+    background: black;
+    width: 200px;
+    font-size: 13px;
+    height: auto;
+    border-radius: 5px 5px 0 5px;
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: -130%;
+    box-shadow: 2px 10px 10px -10px black;
+}
+ .btn-save::before{
+    content: '';
+    position: absolute;
+    border-width: 6px;
+    border-style: solid;
+    border-color: black black transparent transparent;
+    top: 0;
+    right: 0;
+    margin-top: -20%
+}
+.change{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 217, 255, 0.185);
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+.img:hover .change{
+    visibility: visible;
+}
+.filebox input[type="file"] {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip:rect(0,0,0,0);
+	border: 0;
+}
+
+.filebox label {
+	color: #818080;
+	font-size: inherit;
+	line-height: normal;
+	vertical-align: middle;
+	cursor: pointer;
+    background: white;
+    border-radius: 100px;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.filebox label svg{
+    width: 25px;
+}
+/* named upload */
+.filebox .upload-name {
+	display: inline-block;
+	padding: .5em .75em;
+	font-size: inherit;
+	font-family: inherit;
+	line-height: normal;
+	vertical-align: middle;
+	background-color: #f5f5f5;
+  border: 1px solid #ebebeb;
+  border-bottom-color: #e2e2e2;
+  border-radius: .25em;
+  -webkit-appearance: none; 
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.filebox .upload-display {
+	margin-bottom: 5px;
+}
+@media only screen and (max-width:460px){
+    .container{
+        height: 1000px;
+    }
+    .group-form{
+        width: 95%;
+    }
+}

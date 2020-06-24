@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css/style.css">
+    <title>My porofile</title>
+</head>
+<body>
+    <header>
+        <a href="#">
+            <img src="https://i.postimg.cc/WzV4GzdM/man.png" alt="user img" id="header-photo">
+        </a>
+        <div class="bar">
+            <input type="checkbox" id="bar">
+            <label for="bar">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <div class="user-info">
+                <div class="header-user">
+                </div>
+
+                <nav>
+                    <ul>
+                        <li>
+                            <p>User name: </p>
+                            <p  class="username"></p>
+                        </li>
+                        <li>
+                            <p>Email: </p>
+                            <a href="" id="emailaddress"></a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <button class="btn-edit">Edit</button>
+
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <!-- user image and name  -->
+        <div class="userimg">
+            <div class="user-box">
+                <div class="box">
+                    <div class="img">
+                        <img src="https://i.postimg.cc/WzV4GzdM/man.png" alt="user img" id="photo">
+                        <div class="change">
+                            <div class="filebox bs3-primary preview-image">
+                                <label for="input_file">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="user-edit" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="svg-inline--fa fa-user-edit fa-w-20 fa-7x"><path fill="currentColor" d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm0-224c52.9 0 96 43.1 96 96s-43.1 96-96 96-96-43.1-96-96 43.1-96 96-96zm406.6 204.1l-34.7-34.7c-6.3-6.3-14.5-9.4-22.8-9.4-8.2 0-16.5 3.1-22.8 9.4L327.8 424l-7.6 68.2c-1.2 10.7 7.2 19.8 17.7 19.8.7 0 1.3 0 2-.1l68.2-7.6 222.5-222.5c12.5-12.7 12.5-33.1 0-45.7zM393.3 473.7l-39.4 4.5 4.4-39.5 156.9-156.9 35 35-156.9 156.9zm179.5-179.5l-35-35L573 224h.1l.2.1 34.7 35-35.2 35.1zM134.4 320c19.6 0 39.1 16 89.6 16 50.4 0 70-16 89.6-16 20.7 0 39.9 6.3 56 16.9l22.8-22.8c-22.2-16.2-49.3-26-78.8-26-28.7 0-42.5 16-89.6 16-47.1 0-60.8-16-89.6-16C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h243.5c-2.8-7.4-4.1-15.4-3.2-23.4l1-8.6H48c-8.8 0-16-7.2-16-16v-41.6C32 365.9 77.9 320 134.4 320z" class=""></path></svg>
+                                </label> 
+                              <input type="file" id="input_file" class="upload-hidden" accept="image/*"> 
+                            </div>
+                        </div>
+                    </div>
+                    <p class="name"></p>
+                </div>
+                    <button onclick="myB()" class="btn">edit</button>
+
+            </div>
+        </div>
+             <button class="btn-save">Save</button>
+
+<div class="group">
+        <div class="form">
+            <form action="">
+
+                <div class="group-form">
+                    <label for="name">user name <span>*</span></label>
+                    <input type="text"  placeholder="change name"  id="name" min="5" maxlength="10" required autocomplete="off">
+                </div>
+
+                <div class="group-form">
+                    <label for="phone">Add phone number <span>*</span></label>
+                    <input type="text"  placeholder="+xxxx xxxx xxxx" value="" id="phone" required autocomplete="off">
+                </div>
+
+                <div class="group-form">
+                    <label for="country">Add country <span>*</span></label>
+                    <input type="country"  placeholder="Egypt" value="" id="country" required autocomplete="off">
+                </div>
+
+                <div class="group-form">
+                    <label for="country">Add city <span>*</span></label>
+                    <input type="city"  placeholder="Cairo" value="" id="city" required autocomplete="off">
+                </div>
+
+                <div class="group-form">
+                    <label for="facebook"> Facebook <span>*</span></label>
+                    <input type="link"  placeholder="https://..." value="" id="facebook" required autocomplete="off">
+                </div>
+
+                <div class="group-form">
+                    <label for="linkedin"> Linked In <span>*</span></label>
+                    <input type="link"  placeholder="https://..." value="" id="linkedin" required autocomplete="off">
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <div class="user-info-data">
+        <div class="user-box-data">
+            
+        <div class="group-form">
+            <p>user name: <span class="names"></span></p>
+        </div>
+        <div class="group-form">
+            <p>user email: <span class="emailaddress"></span></p> 
+        </div>
+        <div class="group-form">
+                <p>user country: <span class="country"></span></p>
+        </div>
+        <div class="group-form"> 
+             <p>user city: <span class="city"></span></p>
+        </div>
+        <div class="group-form">
+         <p>user phonenumber: <span class="phone"></span></p>
+        </div>
+        <div class="group-form">
+            <p>user facebook: <span class="facebook"></span></p>
+        </div>
+        <div class="group-form">
+            <p>user linkedin: <span class="linked"></span></p>
+        </div>
+        </div>
+    </div>
+
+    </div>
+
+    <!-- user info to be able to chnage anything is t wants -->
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
+     <script type="text/javascript" src="https://cdn.firebase.com/v0/firebase.js"></script> 
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-analytics.js"></script>
+    <script  src="https://www.gstatic.com/firebasejs/7.15.1/firebase-firestore.js"></script>
+    <script  src="https://www.gstatic.com/firebasejs/7.15.1/firebase-storage.js"></script>
+        <script>
+            
+      var firebaseConfig = {
+        apiKey: "AIzaSyCVJy14NLkR55CQx94oZLOzny8W4T25hYk",
+        authDomain: "wallet-extension.firebaseapp.com",
+        databaseURL: "https://wallet-extension.firebaseio.com",
+        projectId: "wallet-extension",
+        storageBucket: "wallet-extension.appspot.com",
+        messagingSenderId: "45020600167",
+        appId: "1:45020600167:web:06e6ab8091bf06f1f741c2",
+        measurementId: "G-2QPEZ5CBGZ"
+      };
+      firebase.initializeApp(firebaseConfig);
+        var db  = firebase.firestore();
+        var storage = firebase.storage();
+
+
+$(document).ready(function(){
+    var fileTarget = $('.filebox .upload-hidden');
+ 
+     fileTarget.on('change', function(){
+         if(window.FileReader){
+             // 파일명 추출
+             var filename = $(this)[0].files[0].name;
+            //  console.log(filename)
+
+         } 
+ 
+         else {
+             // Old IE 파일명 추출
+             var filename = $(this).val().split('/').pop().split('\\').pop();
+         };
+ 
+         $(this).siblings('.upload-name').val(filename);
+     });
+ 
+     //preview image 
+     var imgTarget = $('.preview-image .upload-hidden');
+ 
+     imgTarget.on('change', function(){
+         var parent = $(this).parent();
+         parent.children('.upload-display').remove();
+ 
+         if(window.FileReader){
+             //image 파일만
+             if (!$(this)[0].files[0].type.match(/image\//)) return;
+             
+             var reader = new FileReader();
+             reader.onload = function(e){
+                 var src = e.target.result;
+                 $('#photo').attr('src' , src);
+                 var image = document.getElementById('input_file').files[0];
+                    imagename = image.name
+               var storageRef =  storage.ref('images/' + imagename) 
+                    var uploadTask = storageRef.put(image)
+
+             }
+             reader.readAsDataURL($(this)[0].files[0]);
+         }
+         else {
+             $(this)[0].select();
+             $(this)[0].blur();
+             var imgSrc = document.selection.createRange().text; 
+             var img = $(this).siblings('.upload-display').find('img');
+             img[0].style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(enable='true',sizingMethod='scale',src=\""+imgSrc+"\")";        
+         }
+     });
+ });
+   
+const usernamedata = document.querySelector('.name');
+const headername = document.querySelector('.username');
+const usernae0 = document.querySelector('.names');
+const mail = document.querySelector('.emailaddress');
+const headermail = document.querySelector('#emailaddress');
+const cityname = document.querySelector('.city');
+const countryname = document.querySelector('.country');
+const phon = document.querySelector('.phone');
+const face = document.querySelector('.facebook');
+const linked = document.querySelector('.linked');
+   firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in.
+    var displayName = user.displayName;
+    var email = user.email;
+    var emailVerified = user.emailVerified;
+    var photoURL = user.photoURL;
+    var isAnonymous = user.isAnonymous;
+    var uid = user.uid;
+    var providerData = user.providerData;
+        mail.innerHTML = email;
+        headermail.innerHTML = email;
+
+    db.collection("users").doc(uid).get().then(function(doc){
+        usernamedata.innerHTML = doc.data().displayName;
+        headername.innerHTML = doc.data().displayName;
+        usernae0.innerHTML = doc.data().displayName;
+        cityname.innerHTML = doc.data().city;
+        phon.innerHTML = doc.data().phonenumber;
+        face.innerHTML = doc.data().facebook;
+        linked.innerHTML = doc.data().linkedin;
+        countryname.innerHTML = doc.data().country;
+        usernae0.innerHTML = doc.data().displayName;
+        
+
+        usernamedata.setAttribute('id' , doc.id)
+        usernae0.setAttribute('id' , doc.id)
+    });
+
+  } else {
+  }
+})
+ document.querySelector('.btn-save').addEventListener('click' , function(){
+
+    var user = firebase.auth().currentUser;
+    if(user){
+        db.collection("users").doc(user.uid).update({
+            displayName: document.getElementById('name').value,
+            phonenumber: document.getElementById('phone').value,
+            city: document.getElementById('city').value,
+            country: document.getElementById('country').value,
+            facebook: document.getElementById('facebook').value,
+            linkedin: document.getElementById('linkedin').value
+        }); 
+           $('.group').css('display' , "none")
+    $('.user-info-data').css('display' , "block")
+
+           $(this).css('display' , "none")
+           setInterval(() => {
+                          location.reload()
+           }, 500);
+    }
+ })
+
+function myB(){
+    $('.group').css('display' , "block")
+    $('.btn-save').css('display' , "block")
+    $('.user-info-data').css('display' , "none")
+    var user = firebase.auth().currentUser;
+    if(user){
+        db.collection("users").doc(user.uid).get().then(function(doc){
+        document.getElementById('name').value = doc.data().displayName;
+        document.getElementById('phone').value = doc.data().phonenumber;
+        document.getElementById('city').value = doc.data().city;
+        document.getElementById('country').value = doc.data().country;
+        document.getElementById('facebook').value = doc.data().facebook;
+        document.getElementById('linkedin').value = doc.data().linkedin;
+    });
+}
+}
+
+storage.ref('images').child('dlBinAjax.png').getDownloadURL().then(function(url){
+  var img = document.getElementById('photo');
+  var img_header = document.getElementById('header-photo');
+  img.src = url;
+  img_header.src = url;
+});
+
+
+    </script>
+</body>
+</html>

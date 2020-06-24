@@ -110,14 +110,20 @@ var db = firebase.firestore();
         }
         else{
 
-                firebase.auth().createUserWithEmailAndPassword(email, password).then(cred =>{ 
+        firebase.auth().createUserWithEmailAndPassword(email, password).then(cred =>{ 
         return db.collection("users").doc(cred.user.uid).set({
-                name: name,
+                displayName: name,
                 email: email,
                 password: password,
-                message: "This user have created his/her account right now"
+                id: cred.user.uid,
+                country: "",
+                city:"",
+                facebook:"https://facebook.com",
+                linked: "https://linkedin.com",
+                phonenumber:""
             });
                 signup_form.reset();
+                window.open('../user/','_self')
                 });
             }
     });

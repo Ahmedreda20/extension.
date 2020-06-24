@@ -18,7 +18,7 @@
             <h1>Welcome</h1>
             <p>Register now and get a free, secure note that keeps everything you want </p>
             <form id="form-signin">
-
+                
         <div class="group-form">
             <input type="email" name="email" id="email" placeholder="Email" required autocomplete="off">
         </div>
@@ -54,17 +54,17 @@
         </div>
     </div>
 </div>
+<script src="../firebase/firebase.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
 <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-database.js"></script>
-<!-- <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-analytics.js"></script> -->
+<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-analytics.js"></script>
 <script  src="https://www.gstatic.com/firebasejs/7.15.1/firebase-firestore.js"></script>
 
-
 <script type="text/javascript">
-  var firebaseConfig = {
+
+var firebaseConfig = {
     apiKey: "AIzaSyCVJy14NLkR55CQx94oZLOzny8W4T25hYk",
     authDomain: "wallet-extension.firebaseapp.com",
     databaseURL: "https://wallet-extension.firebaseio.com",
@@ -74,10 +74,22 @@
     appId: "1:45020600167:web:06e6ab8091bf06f1f741c2",
     measurementId: "G-2QPEZ5CBGZ"
   };
-  firebase.initializeApp(firebaseConfig);
-//   const firebase = require("firebase");
-// // Required for side-effects
-// require("firebase/firestore");
+
+ firebase.initializeApp(firebaseConfig);
+ 
+const form_signin = document.querySelector('#form-signin');
+form_signin.addEventListener('submit' , (e)=>{
+e.preventDefault();
+
+const email = form_signin['email'].value;
+const password = form_signin['password'].value;
+
+firebase.auth().signInWithEmailAndPassword(email, password).then(function(cred) {
+    console.log(cred.user.uid);
+    form_signin.reset();
+    window.open('../user/','_self')
+});
+ });
 
 </script>
 </body>
