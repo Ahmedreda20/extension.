@@ -11,6 +11,8 @@
         <a href="#">
             <img src="https://i.postimg.cc/WzV4GzdM/man.png" alt="user img">
         </a>
+
+        <button class="btn-create-post">Create post</button>
         <div class="bar">
             <input type="checkbox" id="bar">
             <label for="bar">
@@ -35,59 +37,28 @@
                         </li>
                     </ul>
                 </nav>
-
-                <button class="btn-edit">Edit</button>
-
             </div>
         </div>
     </header>
-
-    <!-- container post -->
-    <div class="container">
-        <div class="post">
-
-            <!-- header of post -->
-            <div class="header">
-                <a href="">
-                    <img src="https://i.postimg.cc/WzV4GzdM/man.png" alt="admin img">
-                    Admin
-                </a>
-            </div>
-
-            <!-- content of post -->
-            <div class="content">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus soluta cupiditate sequi dolor quia asperiores laborum, nihil excepturi expedita minima recusandae sit ipsa magni ex quisquam architecto quae accusantium illum maxime laudantium! Quaerat maxime expedita alias labore sed, aspernatur quae quas quidem, similique nihil adipisci mollitia facere. Eligendi, molestiae nobis!</p>
-           <div class="comments-num">
-                <input type="checkbox"  id="comment-num">
-               <label for="comment-num">
-                    comments
-                    <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="comment-alt-lines" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-comment-alt-lines fa-w-16 fa-7x"><g class="fa-group"><path fill="currentColor" d="M448 0H64A64.06 64.06 0 0 0 0 64v288a64.06 64.06 0 0 0 64 64h96v84a12 12 0 0 0 19.1 9.7L304 416h144a64.06 64.06 0 0 0 64-64V64a64.06 64.06 0 0 0-64-64zM288 264a8 8 0 0 1-8 8H136a8 8 0 0 1-8-8v-16a8 8 0 0 1 8-8h144a8 8 0 0 1 8 8zm96-96a8 8 0 0 1-8 8H136a8 8 0 0 1-8-8v-16a8 8 0 0 1 8-8h240a8 8 0 0 1 8 8z" class="fa-secondary"></path><path fill="currentColor" d="M280 240H136a8 8 0 0 0-8 8v16a8 8 0 0 0 8 8h144a8 8 0 0 0 8-8v-16a8 8 0 0 0-8-8zm96-96H136a8 8 0 0 0-8 8v16a8 8 0 0 0 8 8h240a8 8 0 0 0 8-8v-16a8 8 0 0 0-8-8z" class="fa-primary"></path></g></svg>
-               </label>
-           </div>
-            </div>
-
-            <!-- comments container all comments on this post -->
-            <div class="comments-container">
-                Put a comment and be the first to comment on this post
-            </div>
-
-            <!-- footer of post til seting comment -->
-            <div class="footer">
-                <div class="controls">
-                    <input type="text"  id="comment" placeholder="Set comment..">
-                    <button class="btn-set-comment">
-                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="handshake" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="svg-inline--fa fa-handshake fa-w-20 fa-7x"><path fill="currentColor" d="M434.7 64h-85.9c-8 0-15.7 3-21.6 8.4l-98.3 90c-.1.1-.2.3-.3.4-16.6 15.6-16.3 40.5-2.1 56 12.7 13.9 39.4 17.6 56.1 2.7.1-.1.3-.1.4-.2l79.9-73.2c6.5-5.9 16.7-5.5 22.6 1 6 6.5 5.5 16.6-1 22.6l-26.1 23.9L504 313.8c2.9 2.4 5.5 5 7.9 7.7V128l-54.6-54.6c-5.9-6-14.1-9.4-22.6-9.4zM544 128.2v223.9c0 17.7 14.3 32 32 32h64V128.2h-96zm48 223.9c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16-7.2 16-16 16zM0 384h64c17.7 0 32-14.3 32-32V128.2H0V384zm48-63.9c8.8 0 16 7.2 16 16s-7.2 16-16 16-16-7.2-16-16c0-8.9 7.2-16 16-16zm435.9 18.6L334.6 217.5l-30 27.5c-29.7 27.1-75.2 24.5-101.7-4.4-26.9-29.4-24.8-74.9 4.4-101.7L289.1 64h-83.8c-8.5 0-16.6 3.4-22.6 9.4L128 128v223.9h18.3l90.5 81.9c27.4 22.3 67.7 18.1 90-9.3l.2-.2 17.9 15.5c15.9 13 39.4 10.5 52.3-5.4l31.4-38.6 5.4 4.4c13.7 11.1 33.9 9.1 45-4.7l9.5-11.7c11.2-13.8 9.1-33.9-4.6-45.1z" class=""></path></svg>
-                    </button>
-                </div>
-            </div>
-
-
+<div class="message-popup">
+    <p></p>
+    <span></span>
+</div>
+    <div class="create-post-container">
+        <div class="create-post">
+            <textarea  id="contant-text" placeholder="what do you think?"></textarea>
+            <button class="btn-create">Save</button>
         </div>
     </div>
+    <!-- container post -->
+    <div class="container">
+        </div>
 
     <!-- script links and path -->
-<script src="./script/mail.js"></script>
+<script src="./script/jquery-3.5.1.min.js"></script>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
 <script type="text/javascript" src="https://cdn.firebase.com/v0/firebase.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-auth.js"></script>
@@ -110,61 +81,7 @@
     var db  = firebase.firestore();
 var database = firebase.database();
 
- const set_comment = document.querySelector('.btn-set-comment');
- const comment_container = document.querySelector('.comments-container');
- const comment_txt = document.getElementById('comment');
- set_comment.addEventListener('click' , function(){
-     if(comment_txt.value != ""){
-            var user = firebase.auth().currentUser;
 
-            if (user) {
- db.collection("users").doc(user.uid).get().then(function(doc){
-    name.innerHTML = doc.data().displayName;
-    console.log(doc.data().displayName)
- });
-
-    const comment = document.createElement('DIV'); //comment container
-    const comment_photo = document.createElement('DIV'); //comment container
-    const comment_box = document.createElement('DIV'); //comment container
-    const ima = document.createElement('IMG'); //comment container
-     const name = document.createElement('H1'); // comment user name
-     const comment_content = document.createElement('p'); // comment user content
-     const span = document.createElement('SPAN'); // comment user content
-
-        comment_container.style.display = "block"
-        comment_container.innerHTML  = '';
-        comment_content.innerHTML = comment_txt.value;
-
-        comment_container.appendChild(comment);
-        comment.appendChild(comment_photo);
-        comment.appendChild(comment_box);
-        comment_photo.appendChild(ima);
-        comment_box.appendChild(span);
-        span.appendChild(name);
-        span.appendChild(comment_content);
-
-        ima.src = "https://i.postimg.cc/WzV4GzdM/man.png";
-
-        comment.setAttribute('class' , 'comment');
-        comment_box.setAttribute('class' , 'box-comment');
-        comment_photo.setAttribute('class' , 'box-comment');
-        comment_txt.value ='';
-            }
-     }else{
-         console.log('oops!')
-     }
-
-
-
- });
-
- document.querySelector('#comment-num').addEventListener('click' , function(){
-     if(this.checked){
-        comment_container.style.height = "300px"
-    }else{
-        comment_container.style.height = "0"
-    }
- });
 
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
@@ -176,19 +93,156 @@ firebase.auth().onAuthStateChanged(function(user) {
     var isAnonymous = user.isAnonymous;
     var uid = user.uid;
     var providerData = user.providerData;
-    console.log(uid)
+    document.getElementById('emailaddress').innerHTML =email;
+    db.collection("users").doc(uid).get().then(function(doc){
+document.getElementById('username').innerHTML = doc.data().displayName;
+});
   } else {
   }
 })
 
-var user = firebase.auth().currentUser;
 
-if (user) {
-db.collection("users").doc(user.uid).get().then(function(doc){
-document.getElementById('username').innerHTML = doc.data().displayName;
-document.getElementById('username').innerHTML = doc.data().email;
+    var createpost_container = document.querySelector('.create-post-container');
+    document.querySelector('.btn-create-post').addEventListener('click'  , function(){
+        if(createpost_container.style.display === "none"){
+            createpost_container.style.display = "flex"
+            this.innerHTML = "Cancel post"
+        }else{
+            createpost_container.style.display = "none"
+                   this.innerHTML = "Create post"
+
+        }
+    });
+
+    //Create post and put it in the home page also set it in db collection
+    var cont = document.querySelector('.container');
+    document.querySelector('.btn-create').addEventListener('click'  , function(){
+        var text = document.getElementById('contant-text');
+
+        //if this text empty don't post anything
+        if(text.value === ""){
+            text.style.background = "rgb(255, 187, 187)";
+        }else{
+            text.style.background = "white";
+            var user =  firebase.auth().currentUser
+            if(user){
+            db.collection("users").doc(user.uid).get().then(function(doc){
+                var name_user = doc.data().displayName;
+            db.collection("posts").doc().set({
+                userpostname: name_user,
+                content: text.value
+            })
+                       });
+                        };
+        $('.message-popup span').css('animation-play-state' , 'running');
+       $('.message-popup p').html("Your post will set after some seconds please wait till it posting")
+       $('.message-popup').fadeIn();
+       setInterval(() => {
+           location.reload()
+       }, 2500);
+        }
+    });
+
+    db.collection("posts").get().then(function(querySnapshot) {
+    querySnapshot.forEach(function(doc) {
+        // doc.data() is never undefined for query doc snapshots
+
+        var cont = document.querySelector(".container");
+             var cont = document.querySelector('.container');
+             var post = document.createElement('DIV');
+             var post_header = document.createElement('DIV');
+             var post_header_a = document.createElement('A');
+             var post_header_img = document.createElement('IMG')
+             var post_content = document.createElement('DIV');
+             var post_content_p = document.createElement('P')
+             var post_comment_num = document.createElement('DIV');
+             var post_comment_num_button = document.createElement('BUTTON')
+             var post_comments_contianer = document.createElement('DIV')
+             var post_comments_contianer_load = document.createElement('DIV')
+             var post_footer = document.createElement('DIV');
+             var post_footer_controls = document.createElement('DIV');
+             var post_footer_controls_input = document.createElement('INPUT');
+             var post_footer_controls_buuton = document.createElement('BUTTON');
+             //set elemnts in their parents
+             cont.appendChild(post);
+             post.appendChild(post_header);
+             post.appendChild( post_content);
+             post.appendChild( post_comments_contianer);
+             post.appendChild(post_footer);
+             post_header.appendChild(post_header_a);
+             post_header_a.appendChild(post_header_img);
+             post_header_a.append(doc.data().userpostname);
+             post_content.appendChild(post_content_p);
+             post_content.appendChild(post_comment_num);
+             post_comment_num.appendChild( post_comment_num_button);
+             post_footer.appendChild(post_footer_controls)
+             post_footer_controls.appendChild(post_footer_controls_input);
+             post_footer_controls.appendChild( post_footer_controls_buuton)
+             //set classes names and id if there is
+             post.setAttribute('class' , 'post');
+             post.setAttribute('data-id' , doc.id);
+             post_header.setAttribute('class' , 'header');
+             post_header_a.setAttribute('id' , 'user id');
+             post_content.setAttribute('class' , 'content');
+             post_comment_num.setAttribute('class' , 'comments-num')
+             post_comment_num_button.setAttribute('class' , 'comment-num')
+             post_comments_contianer.setAttribute('class' , 'comments-container')
+             post_footer.setAttribute('class' , 'footer');
+             post_footer_controls.setAttribute('class' , 'controls');
+             post_footer_controls_input.setAttribute('type' , 'text');
+             post_footer_controls_input.setAttribute('id' , 'comment');
+             post_footer_controls_input.setAttribute('placeholder' , 'Set comment');
+             post_footer_controls_buuton.setAttribute('class' , 'btn-set-comment')
+             post_header_img.setAttribute('src' , 'https://i.postimg.cc/WzV4GzdM/man.png')
+             post_header_img.setAttribute('alt' , 'user-img')
+             post_comment_num_button.innerHTML = "View comments"
+                     post_content_p.innerHTML = doc.data().content;
+                     $(post_comment_num_button).append('<svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="comment-alt-lines" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-comment-alt-lines fa-w-16 fa-7x"><g class="fa-group"><path fill="currentColor" d="M448 0H64A64.06 64.06 0 0 0 0 64v288a64.06 64.06 0 0 0 64 64h96v84a12 12 0 0 0 19.1 9.7L304 416h144a64.06 64.06 0 0 0 64-64V64a64.06 64.06 0 0 0-64-64zM288 264a8 8 0 0 1-8 8H136a8 8 0 0 1-8-8v-16a8 8 0 0 1 8-8h144a8 8 0 0 1 8 8zm96-96a8 8 0 0 1-8 8H136a8 8 0 0 1-8-8v-16a8 8 0 0 1 8-8h240a8 8 0 0 1 8 8z" class="fa-secondary"></path><path fill="currentColor" d="M280 240H136a8 8 0 0 0-8 8v16a8 8 0 0 0 8 8h144a8 8 0 0 0 8-8v-16a8 8 0 0 0-8-8zm96-96H136a8 8 0 0 0-8 8v16a8 8 0 0 0 8 8h240a8 8 0 0 0 8-8v-16a8 8 0 0 0-8-8z" class="fa-primary"></path></g></svg>')
+                     $(post_footer_controls_buuton).append('<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="handshake" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="svg-inline--fa fa-handshake fa-w-20 fa-7x"><path fill="currentColor" d="M434.7 64h-85.9c-8 0-15.7 3-21.6 8.4l-98.3 90c-.1.1-.2.3-.3.4-16.6 15.6-16.3 40.5-2.1 56 12.7 13.9 39.4 17.6 56.1 2.7.1-.1.3-.1.4-.2l79.9-73.2c6.5-5.9 16.7-5.5 22.6 1 6 6.5 5.5 16.6-1 22.6l-26.1 23.9L504 313.8c2.9 2.4 5.5 5 7.9 7.7V128l-54.6-54.6c-5.9-6-14.1-9.4-22.6-9.4zM544 128.2v223.9c0 17.7 14.3 32 32 32h64V128.2h-96zm48 223.9c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16-7.2 16-16 16zM0 384h64c17.7 0 32-14.3 32-32V128.2H0V384zm48-63.9c8.8 0 16 7.2 16 16s-7.2 16-16 16-16-7.2-16-16c0-8.9 7.2-16 16-16zm435.9 18.6L334.6 217.5l-30 27.5c-29.7 27.1-75.2 24.5-101.7-4.4-26.9-29.4-24.8-74.9 4.4-101.7L289.1 64h-83.8c-8.5 0-16.6 3.4-22.6 9.4L128 128v223.9h18.3l90.5 81.9c27.4 22.3 67.7 18.1 90-9.3l.2-.2 17.9 15.5c15.9 13 39.4 10.5 52.3-5.4l31.4-38.6 5.4 4.4c13.7 11.1 33.9 9.1 45-4.7l9.5-11.7c11.2-13.8 9.1-33.9-4.6-45.1z" class=""></path></svg>')
+    
+    });
+    const set_comment = document.querySelector('.btn-set-comment');
+ const comment_container = document.querySelector('.comments-container');
+ const comment_txt = document.querySelector('#comment');
+
+ $(document).ready(function(){
+    $('.comment-num').click(function(){
+        if($(this.parentElement.parentElement.parentElement.children[2]).toggleClass('comments-container')){
+            $(this.parentElement.parentElement.parentElement.children[2]).toggleClass('comments-container -container')
+    db.collection('posts').doc($(this.parentElement.parentElement.parentElement).attr('data-id')).collection("comments").get().then(function(querySnapshot){
+            querySnapshot.forEach(function(doc) {   
+             $('.comments-container').append("<div class='comment'><div class='box-comment'><img src='https://i.postimg.cc/WzV4GzdM/man.png' alt='user'></div><div class='box-comment'><span><h1 id='names'>" +doc.data().owner_name + "</h1><p>" +doc.data().comment_txt + "</p></span></div></div>")        
+      });
+             }); 
+                    $(this.parentElement.parentElement.parentElement.children[2]).html('')
+                    $(this.parentElement.parentElement.parentElement.children[2]).css('display' , 'block')
+                    }else{
+                    $(this.parentElement.parentElement.parentElement.children[2]).removeClass('-container')
+                    $(this.parentElement.parentElement.parentElement.children[2]).css('display' , 'flex')
+                    $(this.parentElement.parentElement.parentElement.children[2]).html('Press view comments to see it')
+                        }
+    });
 });
-    }
+$(document).ready(function(){
+    $('.btn-set-comment').click(function(){
+        var user =  firebase.auth().currentUser
+            if(user){
+                   db.collection('posts').doc($(this.parentElement.parentElement.parentElement).attr('data-id')).collection("comments").doc().set({
+                     comment_txt: comment_txt.value,
+                     owner_name:  document.getElementById('username').innerHTML
+                          }); 
+        $('.message-popup span').css('animation-play-state' , 'running');
+       $('.message-popup p').html("Your comment will set after some seconds please wait")
+       $('.message-popup').fadeIn();
+       setInterval(() => {
+           location.reload()
+       }, 2500);
+            }
+    });
+});
+
+});
+
 </script>
 </body>
 </html>

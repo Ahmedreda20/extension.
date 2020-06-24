@@ -79,13 +79,7 @@
     measurementId: "G-2QPEZ5CBGZ"
   };
   firebase.initializeApp(firebaseConfig);
-//   const firebase = require("firebase");
-// // Required for side-effects
-// require("firebase/firestore");
 var db = firebase.firestore();
-
-
-
 
     const signup_form = document.querySelector('#form-signup');
     const error_container =  document.querySelector('.error-container');
@@ -97,19 +91,10 @@ var db = firebase.firestore();
         const email = signup_form['email'].value;
         const email_confirm = signup_form['email-confirm'].value;
         const password = signup_form['password'].value;
-
-
-
-
-
-
         if(email_confirm != email){
             error_container.style.display = "flex";
-            // location.reload();
-
         }
         else{
-
         firebase.auth().createUserWithEmailAndPassword(email, password).then(cred =>{ 
         return db.collection("users").doc(cred.user.uid).set({
                 displayName: name,
@@ -123,23 +108,18 @@ var db = firebase.firestore();
                 phonenumber:""
             });
                 signup_form.reset();
-                window.open('../user/','_self')
+                window.open('../community/','_self')
                 });
             }
     });
-
-
     document.querySelector('.btn-tryagain').addEventListener('click' , function(){
-        // error_container.style.display = "none";
-        // location.reload();
+         error_container.style.display = "none";
+         location.reload();
     });
-
     window.onclick = function(event) {
-
   if (event.target == error_container) {
     error_container.style.display = "none";
   }
-
 }
 </script>
 </body>
